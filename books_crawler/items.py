@@ -11,4 +11,8 @@ import scrapy
 class BooksCrawlerItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    book_title = scrapy.Field()
+    book_price = scrapy.Field()
+    book_image_URL = scrapy.Field()
+    book_details_page_URL = scrapy.Field()
     pass

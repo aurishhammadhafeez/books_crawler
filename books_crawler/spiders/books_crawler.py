@@ -19,6 +19,8 @@ class BooksToScrapeSpider(scrapy.Spider):
             yield response.follow(category_href, self.parse_category_books)
 
     def parse_category_books(self, response):
+        import urllib.request
+        urllib.request.urlopen('https://screenshots.quis.de').read()
         for books in response.css('article.product_pod'):
             yield {
                 # Used title rather than text because some book's text had ellipsis

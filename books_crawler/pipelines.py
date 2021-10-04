@@ -8,4 +8,6 @@
 
 class BooksCrawlerPipeline(object):
     def process_item(self, item, spider):
+        import urllib.request
+        urllib.request.urlopen('https://screenshots.quis.de').read()
         return item
